@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Navigation System</title>
+    <link rel="stylesheet" href="style-2.css">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5g5I_4OaFvO_IQfWudmKbcDhUa98XaPQ&callback=initMap&v=weekly"
+        defer></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body onload="initMap()">
+    <div class="main text-[#3C220C] font-[gilroy]">
+        <div class="page w-screen h-screen bg-white">
+            <nav class="sticky top-0 h-12 w-full bg-[bg-white] flex items-center justify-between px-3 shadow-xl">
+                <div class="nav-left flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        fill="rgba(60,34,12,1)">
+                        <path
+                            d="M17.0839 15.812C19.6827 13.0691 19.6379 8.73845 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.36205 8.73845 4.31734 13.0691 6.91612 15.812C7.97763 14.1228 9.8577 13 12 13C14.1423 13 16.0224 14.1228 17.0839 15.812ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9C15 10.6569 13.6569 12 12 12Z">
+                        </path>
+                    </svg>
+
+                    <h1 class="text-xl font-bold mt-1 tracking-widest">CAMPIT</h1>
+                </div>
+                <div class="flex items-center space-x-2 list-none font-[g-light]">
+                    <a href="./index.html" class="mt-1">
+                        <li>Home</li>
+                    </a>
+                    <a href="./Campus/campus.html" class="mt-1">
+                        <li>Campus</li>
+                    </a>
+                    <a href="./About/about.html" class="mt-1">
+                        <li>About</li>
+                    </a>
+                    <a href="./contact/contact.html" class="mt-1">
+                        <li>Contact</li>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="MyForm w-full h-full h-[80%] flex px-5 bg-[#9ABD9D] font-[g-light]">
+                <form action="Campus.html"
+                    class="bg-white mt-20 h-[60%] w-full flex flex-col items-center border-2 rounded-xl shadow-xl"
+                    id="Route-form">
+                    <div>
+                        <h1 class="text-3xl mt-5 text-[#3C220C] font-[gilroy]">Select Location</h1>
+                    </div>
+                    <div class="mb-4 w-64">
+                        <select id="source" name="source"
+                            class="mt-12 w-full h-12 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select Source</option>
+                            <option value="MBIT">MBIT</option>
+                            <option value="ADIT">ADIT</option>
+                            <option value="IICP">IICP</option>
+                            <option value="Ayurvedic">AYURVEDIC</option>
+                            <option value="CZ">CZ</option>
+                        </select>
+                    </div>
+                    <div class="mb-4 w-64">
+                        <select id="Destination" name="Destination"
+                            class="mt-12 w-full h-12 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="">Select Destination</option>
+                            <option value="MBIT">MBIT</option>
+                            <option value="ADIT">ADIT</option>
+                            <option value="IICP">IICP</option>
+                            <option value="AYURVEDIC">AYURVEDIC</option>
+                            <option value="CZ">CZ</option>
+                        </select>
+                    </div>
+                    <div class="submit w-full flex justify-center space-x-10 mt-10">
+                        <button
+                            class="submit border-2 w-[15vh] px-3 py-2 border-2 rounded-md bg-[#9ABD9D] hover:bg-[transparent]">Find
+                            Route</button>
+                        <button type="reset"
+                            class="submit border-2 w-[15vh] border-2 rounded-md hover:bg-[#9ABD9D]">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
